@@ -1,0 +1,18 @@
+* {
+    display: flex;
+    
+}
+
+.formulario {
+    border: 1px solid #333;
+    width: 350px;
+    height: 250px;
+    display: flex;
+}  
+
+input {
+    width: 
+    display: flex;
+    flex-direction: column;
+
+}
