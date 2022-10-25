@@ -1,24 +1,13 @@
-const { MongoClient } = require("mongodb");
+import { initializeApp } from "firebase/app";
 
-// Replace the uri string with your connection string.
-const uri =
-  "uri";
+const firebaseConfig = {
+  apiKey: "AIzaSyCd2jfk-CXTbyUEqcebJJ7XOoEyBM8hLX4",
+  authDomain: "loginsenai-c0191.firebaseapp.com",
+  projectId: "loginsenai-c0191",
+  storageBucket: "loginsenai-c0191.appspot.com",
+  messagingSenderId: "131535449207",
+  appId: "1:131535449207:web:4a354ef1ec79f73e402a72",
+  measurementId: "G-E9MK5J34VK"
+};
 
-const client = new MongoClient(uri);
-
-async function run() {
-  try {
-    const database = client.db('db');
-    const movies = database.collection('coelcao');
-
-    // Query for a movie that has the title 'Back to the Future'
-    const query = { query: "query" };
-    const movie = await movies.findOne(query);
-
-    console.log(movie);
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
+const app = initializeApp(firebaseConfig);
