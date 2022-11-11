@@ -1,187 +1,132 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    border: none;
     padding: 0;
-    margin: 0;
-    border: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-image: url(images/background.jpg);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
-.formulario {
-    border-radius: 3px;
-    width: calc(100% - 20px);
-    max-width: 390px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(248, 248, 248);
-    margin: auto;
-    z-index: 1;
-    border-top: aqua 1px;
-    min-height: 180px;
-}
-
-h2 {
-    color: rgb(194, 194, 194);
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.div-1 input {
-    width: 180px;
-    height: 15px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 0;
-    border: 0;
-    background-color: rgb(201, 201, 201);
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.sqr-out {
+.background {
     position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.385);
     width: 100%;
     height: 100%;
+}
+
+.main {
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    max-width: 350px;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(249, 249, 249);
+    z-index: 1;
     overflow: hidden;
 }
 
-.sqr {
-    position: absolute;
-    width: 100%;
-    transform: rotate(-50deg);
-    height: 100%;
-    background-color: white;
-    right: -40vw;
-    bottom: -30vh;
+.main h2 {
+    color: rgb(167, 167, 167);
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 .div-1 {
-    width: 200px;
-    margin: auto;
-    margin-top: 10px;
-}
-
-#email_para {
-    margin-top: 0;
-}
-
-.div-2 {
-    display: flex;
-    justify-content: center;
-    height: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.div-2 p {
-    margin: auto;
-    margin-left: 10px;
-    font-size: 85%;
-}
-
-.div-2 input {
-    margin: auto;
-    margin-right: 0;
-}
-
-.div-4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.div-4 p {
+    width: calc(100% - 20px);
+    max-width: 250px;
     margin: 10px;
 }
 
-.mudar-fonte {
-    font-size: small;
-    margin: auto;
+.div-input p {
+    margin-bottom: 10px;
 }
 
-.rdc {
-    cursor: pointer;
-}
-
-.div-5 {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-button {
-    width: 200px;
-    border-radius: 0;
-    border: 0;
-    background-color: rgb(201, 201, 201);
+.div-input input {
+    height: 6vh;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
     padding: 10px;
+}
+
+.div-input input::placeholder {
+    color:rgb(44, 44, 44);
+} 
+
+.div-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-button button {
+    height: 6vh;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    border-bottom: solid 2px rgb(44, 44, 44);
+    cursor: pointer;
     font-weight: bolder;
-    box-shadow: 0 2px 1px;
-    cursor: pointer;
+    color: rgb(77, 77, 77);
 }
 
-.btn_1 {
-    margin-top: 20px;
+.div-button p {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
-#email_errado {
-    color: red;
+.div-rec {
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.div_parte {
-    width: 200px;
-    margin: 0 auto;
-    margin-top: 10px;
+.div-check {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.div_cadastro {
+.checkbox{
+    min-width: 20px;
+    height: 20px;
+    transition: .1s;    
+    border: 1px solid rgb(38, 38, 38);
     border-radius: 3px;
-    width: calc(100% - 20px);
-    max-width: 390px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(248, 248, 248);
-    margin: auto;
-    z-index: 1;
-    border-top: aqua 1px;
-    min-height: 400px;
+    margin-right: 10px;
 }
 
-.div_cadastro input {
-    width: 180px;
-    height: 15px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 0;
-    border: 0;
-    background-color: rgb(201, 201, 201);
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.active{
+    animation: checkmation 1s;
+    background-color: rgb(65, 65, 65); 
 }
 
-.div_cadastro button {
-    margin-top: 15px;
-}
+@keyframes checkmation {
+    0% {
+        box-shadow: 0 0 0 0;
+    }
 
-.borda_vermelha {
-    border: 1px solid red;
-}
+    50% {box-shadow: 0 0 0 4px rgba(40, 40, 40, 0.412);}
 
-.div_cadastro p {
-    margin: auto;
-    margin-left: 10px;
-    font-size: 85%;
+    100% {
+        box-shadow: 0 0 0 0;
+    }
 }

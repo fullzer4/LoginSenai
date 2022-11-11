@@ -1,3 +1,16 @@
+let checkbox = document.querySelector(".checkbox");
+let active = 0;
+
+checkbox.onclick = () => {
+    if(active == 0){
+        checkbox.classList.add("active");
+        active = 1;         
+    } else {
+        checkbox.classList.remove("active");
+        active = 0;
+    }
+}
+
 const login = () => {
     let email = document.getElementById('email').value
     let substrair = email.split("@");
@@ -13,7 +26,7 @@ const login = () => {
         let hide = document.querySelector('.div-3');
         hide.style.display = "none"
 
-        document.querySelector('.formulario').innerHTML = `
+        document.querySelector('.main').innerHTML = `
             <h2>Logado com sucesso</h2>
             <h3>Acesse a página inicial para começar</h3>
             <button class="btn_1" onclick="voltar()">Início</button>
@@ -29,7 +42,7 @@ const cadastrar = () => {
     let hide = document.querySelector('.div-3');
     hide.style.display = "none"
 
-    document.querySelector('.formulario').innerHTML = `
+    document.querySelector('.main').innerHTML = `
         <h2>CADASTRO</h2>
         <div class="div_cadastro">
             <div class="div_parte">
